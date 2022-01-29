@@ -1,0 +1,32 @@
+package fr.granvendev.ex;
+
+import java.util.ArrayList;
+
+public class Main {
+
+	public static void main(String[] args) {
+
+		// creation liste des noms de jouets
+		ArrayList<String> jouets = new ArrayList<String>();
+		jouets.add("Scrubble Deluxe");
+		jouets.add("Lou Garou");
+		jouets.add("zebre figurine");
+		jouets.add("Osobot Evo");
+		jouets.add("Arraigne peluche");
+		jouets.add("Ligo Star wars");
+		jouets.add("Bakogan Battle Pack");
+		jouets.add("Lou Garou");
+		
+		// Affichage
+		// loop from java 8 + lambda
+		jouets.stream().forEach(x -> System.out.println(x));
+		// loop from java 8 + reference
+		//jouets.forEach(System.out::println);
+		
+		// Tri liste alphabetique
+		//jouets.sort(null);
+		
+		System.out.println("End");
+	}
+
+}

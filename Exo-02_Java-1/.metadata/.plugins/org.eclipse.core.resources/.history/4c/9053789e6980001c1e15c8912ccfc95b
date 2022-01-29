@@ -1,0 +1,42 @@
+package fr.granvendev.ex;
+
+public class Jouet2 {
+
+	// attributs
+	private String nom;
+	private int prix;
+	private String description;
+	private int promotion;
+	
+	
+	public Jouet2() {
+		super();
+	}
+	
+	// constructeur
+	public Jouet2(String nom, int prix, String description, int promotion) {
+		super();
+		this.nom = nom;
+		this.prix = prix;
+		this.description = description;
+		this.promotion = promotion;
+	}
+	
+	// getters
+	public String getNom() {
+		return nom;
+	}
+
+	public int getPrix() {
+		return prix;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public int getPromotion() {
+		return promotion;
+	}	
+	
+}
