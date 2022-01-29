@@ -1,0 +1,19 @@
+
+# creer sur le site GitHub un depot .git
+cd clone https://github.com/StefBibi/ExosGraven.git
+cd GravenExos/
+
+git add Exo-01_Python-1/
+git commit -m "Ajout exo 1/30"
+git push
+
+git branch dev
+git checkout dev
+git status
+git push --set-upstream origin dev
+
+git add Exo-02_Java-1/
+git commit -m "Ajout exo 02/31"
+git push
+
+# aller sur le site GitHub pour PR et Release
