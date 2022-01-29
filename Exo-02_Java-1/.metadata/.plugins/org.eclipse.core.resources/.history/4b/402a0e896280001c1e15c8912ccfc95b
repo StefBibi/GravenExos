@@ -1,0 +1,9 @@
+package fr.granvendev.ex;
+
+public class Jouet {
+
+	float prix;
+	String description;
+	int promotion;
+	
+}

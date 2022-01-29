@@ -1,0 +1,59 @@
+package fr.granvendev.ex;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Main2 {
+	
+	public static void main(String[] args) {
+
+		// creation liste d'objet jouet
+		List<Jouet> jouets = new ArrayList<>();
+		
+		// remplissage liste
+        jouets.add(new Jouet("Scrubble Deluxe", 20, "Petit jeu de société", 5));
+        jouets.add(new Jouet("Lu Garu", 15, "Jeu avec pleins de roles", 10));
+        jouets.add(new Jouet("Zebre Figurine", 6, "Super figurine de zebre", 5));
+        jouets.add(new Jouet("Osobot Evo", 70, "robot pour apprendre à dev", 15));
+        jouets.add(new Jouet("Araignée peluche", 30, "peluche toute douce", 5));
+        jouets.add(new Jouet("Ligo Start wars", 120, "super ligo box de start wars", 20));
+        jouets.add(new Jouet("Bakogan Battle Pack", 20, "jeu de bataille de figurine", 0));
+		
+		// Affichage
+		// loop from java 8 + lambda
+		// jouets.stream().forEach(string -> System.out.println(string));
+        // Afficher la liste à nouveau
+        for(Jouet jouet : jouets) {
+            System.out.println("Jouet: " + jouet.getNom() + " ("+ jouet.getPrix() +"€) " +
+                    jouet.getDescription() + " (promo: " + jouet.getPromotion() + "% de reduc)");
+        }
+		
+		System.out.println("----------------------------------");
+		
+		// Tri liste alphabetique
+		//Collections.sort(jouets); // Si liste en String
+		Collections.sort(jouets,new Comparator<Jouet>() {
+			@Override
+			public int compare(Jouet j1, Jouet j2) {
+//				if (j1.getPrix() > j2.getPrix()) {
+//					return 1;
+//				} else {
+//					return -1;
+//				}
+				return j1.getPrix() - j2.getPrix(); // version courte
+			}
+			
+		});
+		
+		// loop from java 8 + reference
+		// jouets.forEach(System.out::println); // Si liste en String
+        for(Jouet jouet : jouets) {
+            System.out.println("Jouet: " + jouet.getNom() + " ("+ jouet.getPrix() +"€) " +
+                    jouet.getDescription() + " (promo: " + jouet.getPromotion() + "% de reduc)");
+        }		
+		
+	}
+
+}
